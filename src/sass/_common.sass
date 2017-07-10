@@ -103,7 +103,7 @@ select, input, textarea,
 i, em, u, cite
   font-style: normal
 
-/*strong{font-weight:normal;}
+/*strong{font-weight:normal;}*/
 
 figcaption
   text-indent: -9999em
@@ -412,7 +412,7 @@ html.s1 .f_header-type1 .desc
     display: block
     width: 100%
     height: 32px
-    a
+    span
       display: inline-block
       position: absolute
       top: 0
@@ -802,9 +802,10 @@ html.s1 .f_header-type1 .desc
           width: 2px
           height: 10px
           background: #afafaf
-      a
+      span
         display: inline-block
         font-size: 18px
+        cursor: pointer
         font-family: "SamsungOne"
         font-weight: bold
         color: #757575
@@ -823,8 +824,18 @@ html.s1 .f_header-type1 .desc
     display: none
     position: relative
     padding-bottom: 54px
-    &.view
+    &.current
       display: block
+      
+.controls_thumb
+  margin: 50px auto 40px 
+  height: 1px 
+  background-color: #bebebe
+  max-width: 1024px 
+  width: 100% 
+
+.tab-content
+  display: none
 
 .filter-slide
   .slide_etc .slide_arrow
@@ -849,22 +860,23 @@ html.s1 .f_header-type1 .desc
           width: 100%
           height: auto
   .basic-filter-scroll
-    overflow: hidden
+    // overflow: hidden
     max-width: 1024px
     height: 130px
     margin: 0 auto
   .thumb-nav
+    max-width: 1550px 
     overflow: hidden
     overflow-x: auto
     -webkit-overflow-scrolling: touch
     position: relative
-    max-width: 1024px
-    padding-bottom: 30px
-    a
+    // max-width: 1024px
+    padding-bottom: 30px 
+    div
       position: relative
-      float: left
-      width: 158px
-      height: auto
+      // float: left
+      // width: 158px
+      // height: auto
       margin-left: 16px
       background: none
       border: 0
@@ -874,7 +886,7 @@ html.s1 .f_header-type1 .desc
         filter: alpha(opacity = 40)
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"
         transition: opacity 0.4
-      &.on img
+      &.slick-current img
         opacity: 1
         filter: alpha(opacity = 100)
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
@@ -947,7 +959,7 @@ html.s1 .f_header-type1 .desc
   display: none
   position: relative
   padding-bottom: 83px
-  &.view
+  &.current
     display: block
   .food-mode-img
     position: relative
@@ -1040,6 +1052,9 @@ html.s1 .f_header-type1 .desc
       width: 88px
       height: 88px
 
+.thumbPage
+  cursor: pointer
+
 .s1
   .m_content-filter
     height: auto
@@ -1097,6 +1112,7 @@ html.s1 .f_header-type1 .desc
       height: 106px
       max-width: 100%
     .thumb-nav
+      // cursor: pointer
       left: auto
       width: 100%
       height: 106px
@@ -1147,6 +1163,17 @@ html.s1 .f_header-type1 .desc
       height: 45px
       margin: 0 8px
       font-size: 12px
+
+.basic-filter-scroll
+  position: relative
+  .slide_etc 
+    .slide_arrow
+      margin-top: -35px
+
+.image-thumb_prev
+  margin-left: -100px
+.image-thumb_next
+  margin-right: -100px
 
 .m_content-capture
   article
