@@ -73,36 +73,13 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 @font-face { font-family: "SamsungOne"; src: url("fonts/samsungonecyrillic-700.woff2") format("woff2"), url("fonts/samsungonecyrillic-700.woff") format("woff"); font-weight: bold; font-style: normal; }
 legend, caption, hr { display: none; }
 
-body { font-family: "SamsungOne", sans-serif; color: #000; background-color: #fff; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; -moz-osx-font-smoothing: grayscale; margin: 0; padding: 0; }
+body { font-family: "SamsungOne", sans-serif; color: #000; background-color: #fff; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; margin: 0; padding: 0; }
 
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button, iframe, th, td { margin: 0; padding: 0; }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; margin: 0; padding: 0; }
-
-h1, h2, h3, h4, h5, h6, dt { font-weight: normal; }
-
-img, fieldset, iframe, button { border: 0 none; }
-
-li { list-style: none; }
-
-button { border: 0 none; }
-
-table { border-collapse: collapse; border-spacing: 0; }
-
-th, td { border-collapse: collapse; }
-
-legend, caption, hr { display: none; }
-
-select, input, textarea, i, em, u, cite { font-style: normal; }
-
-/*strong{font-weight:normal;} */
 figcaption { text-indent: -9999em; font-size: 0; }
 
 img, a { color: #4b4c4c; text-decoration: none; outline-offset: -1px; }
 
 .chrome a, .safari a { outline-offset: -3px; }
-
-body { -webkit-font-smoothing: antialiased; }
 
 section[class*="m_content-"] { max-width: 1440px; margin: 0 auto; position: relative; overflow: hidden; z-index: 1; }
 
@@ -171,6 +148,7 @@ figure[data-media-video] video { visibility: visible; position: absolute; left: 
 .f_container { position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 100%; overflow: hidden; }
 .f_container > figure { position: absolute; height: 100%; left: 50%; width: 1440px; margin-left: -720px; }
 .f_container > figure img { display: block; margin: 0 auto; -height: 100%; }
+.f_container .img_mt_mod { margin-top: 100px; }
 
 .load .f_container > figure img { transition: all 0.96s cubic-bezier(0.215, 0.61, 0.355, 1); -webkit-transition: all 0.96s cubic-bezier(0.215, 0.61, 0.355, 1); -moz-transition: all 0.96s cubic-bezier(0.215, 0.61, 0.355, 1); -o-transition: all 0.96s cubic-bezier(0.215, 0.61, 0.355, 1); }
 .load.safari .f_container > figure img { transition: none; -webkit-transition: none; }
@@ -214,20 +192,20 @@ html.s1 .f_header-type1 .desc { max-width: 330px; padding: 0 16px; margin: 12px 
 .s1 .slide-list-box .slide_etc .slide_page a { background-color: #000; border-color: #757575; }
 .s1 .slide-list-box .slide_etc .slide_page a.on { background-color: #fff; border-color: #fff; }
 
-.m_content-design { height: 1598px; }
+.m_content-design { height: 1398px; }
 .m_content-design article { position: relative; left: 50%; width: 1440px; margin-left: -720px; }
 .m_content-design .design-simply-img { display: none; }
-.m_content-design .simply { right: 260px; top: 113px; width: 440px; text-align: right; }
+.m_content-design .simply { right: 260px; top: 20px; width: 440px; text-align: right; }
 .m_content-design .simply .tit { text-align: right; }
 .m_content-design .simply .desc { text-align: right; margin-top: 23px; }
 .m_content-design .uniform .desc { margin-top: 23px; }
 .m_content-design .simply span { display: inline-block; width: 100px; margin-top: 40px; font-family: "SamsungOne"; font-weight: bold; font-size: 18px; }
 .m_content-design .simply span img { display: block; margin-bottom: 17px; }
-.m_content-design .uniform { left: 260px; bottom: 110px; width: 540px; }
+.m_content-design .uniform { left: 260px; bottom: 70px; width: 540px; }
 .m_content-design .uniform .tit, .m_content-design .uniform .desc { text-align: left; }
 .m_content-design .zero { display: none; }
 .m_content-design .f_container figure { left: auto; margin-left: 0; }
-.m_content-design .design-uniform-img figure { top: 300px; left: 50%; width: auto; height: auto; margin-left: -480px; }
+.m_content-design .design-uniform-img figure { top: 300px; left: 50%; width: auto; height: auto; margin-left: -400px; }
 .m_content-design .design-uniform-img figure.mobile_zero_camera { display: none; }
 
 .ie .m_content-design .design-uniform-img figure { overflow: hidden; }
@@ -298,7 +276,7 @@ html.s1 .f_header-type1 .desc { max-width: 330px; padding: 0 16px; margin: 12px 
 .s1 .m_content-color .slider { width: 9999px; }
 .s1 .m_content-color .slide_etc { position: absolute; bottom: 35px; z-index: 10; width: 100%; }
 
-.m_content-capture-richer { height: 855px; background: #000; }
+.m_content-capture-richer { height: 690px; background: #000; }
 .m_content-capture-richer .f_header-type1 { padding-top: 96px; }
 .m_content-capture-richer .f_header-type1 .tit { color: #fff; }
 .m_content-capture-richer .f_header-type1 .desc { color: #fff; margin-top: 25px; }
@@ -332,7 +310,7 @@ html.s1 .f_header-type1 .desc { max-width: 330px; padding: 0 16px; margin: 12px 
 .m_content-filter .filter-slide { display: none; position: relative; padding-bottom: 54px; }
 .m_content-filter .filter-slide.current { display: block; }
 
-.controls_thumb { margin: 50px auto 40px; height: 1px; background-color: #bebebe; max-width: 1024px; width: 100%; }
+.controls_thumb { margin: 50px auto 40px; height: 1px; background-color: #bebebe; max-width: 994px; width: 100%; }
 
 .tab-content { display: none; }
 
@@ -504,14 +482,14 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc { width: auto; p
 .s1 .m_content-capture .capture-slide .img-pagenation a.on span { opacity: 1; filter: alpha(opacity=100); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
 .s1 .m_content-capture .capture-slide .slide-list .info { bottom: 10px; right: 16px; font-size: 8px; }
 
-.m_content-ip68 { height: 1415px; background: #000; }
-.m_content-ip68 article { position: relative; left: 50%; width: 1440px; margin-left: -720px; }
-.m_content-ip68 .f_header-type1 { top: 90px; left: 710px; width: 500px; text-align: right; }
+.m_content-ip68 { height: 1255px; background: #000; }
+.m_content-ip68 article { position: relative; left: 50%; width: 1440px; margin-left: -640px; }
+.m_content-ip68 .f_header-type1 { top: 90px; left: 670px; width: 500px; text-align: right; }
 .m_content-ip68 .f_header-type1 .tit, .m_content-ip68 .f_header-type1 .desc { color: #fff; }
 .m_content-ip68 .f_header-type1 .tit { display: inline-block; font-size: 74px; text-align: right; }
 .m_content-ip68 .f_header-type1 .desc { display: inline-block; width: 430px; margin-top: 24px; text-align: right; }
 .m_content-ip68 .f_container figure { left: 0; width: 100%; margin-left: 0; }
-.m_content-ip68 .f_container .ip68-txt { position: absolute; top: auto; bottom: 100px; left: 245px; z-index: 10; }
+.m_content-ip68 .f_container .ip68-txt { position: absolute; top: auto; bottom: 80px; left: 135px; z-index: 10; }
 .m_content-ip68 .f_container .ip68-txt strong, .m_content-ip68 .f_container .ip68-txt p { color: #fff; }
 .m_content-ip68 .f_container .ip68-txt strong { display: block; font-size: 190px; font-family: "SamsungOne"; font-weight: bold; }
 .m_content-ip68 .f_container .ip68-txt p { font-size: 14px; margin-top: -30px; font-family: "SamsungOne"; }
@@ -619,11 +597,11 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc { width: auto; p
 .m_content-sound .f_header-type1 .tit, .m_content-sound .f_header-type1 .desc { text-align: left; }
 .m_content-sound .f_container { overflow: visible; width: 100%; height: inherit; }
 .m_content-sound .f_container figure { height: auto; }
-.m_content-sound .sound-top-arti { position: relative; height: 890px; }
+.m_content-sound .sound-top-arti { position: relative; height: 730px; }
 .m_content-sound .sound-top-arti figure { left: 0; bottom: 0; width: 775px; margin-left: 0; }
-.m_content-sound .sound-top-arti .f_header-type1 { position: absolute; top: 302px; left: 830px; }
+.m_content-sound .sound-top-arti .f_header-type1 { position: absolute; top: 182px; left: 830px; }
 .m_content-sound .sound-top-arti .f_header-type1 .desc { width: 300px; margin-top: 20px; }
-.m_content-sound .sound-btm-arti { position: relative; height: 957px; }
+.m_content-sound .sound-btm-arti { position: relative; height: 807px; }
 .m_content-sound .sound-btm-arti .f_header-type1 { left: 240px; top: 406px; }
 .m_content-sound .sound-btm-arti .f_header-type1 .desc { width: 370px; margin-top: 30px; }
 .m_content-sound .sound-btm-arti figure { left: auto; right: 0; bottom: 0; z-index: 10; width: 913px; margin-left: 0; }
@@ -679,12 +657,12 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc { width: auto; p
 .s1 .m_content-sound .sound-btm-arti .f_container { top: auto; bottom: 0; height: 641px; }
 .s1 .m_content-sound .sound-btm-arti .notebook { display: none; }
 
-.m_content-usb { height: 953px; background: #000; }
+.m_content-usb { height: 853px; background: #000; }
 .m_content-usb .f_header-type1 { color: #fff; }
 .m_content-usb .f_header-type1 .tit { margin: 62px 0 25px; }
 .m_content-usb .f_header-type1 .desc { width: 930px; margin: 0 auto; }
 .m_content-usb .f_container { width: 1440px; left: 50%; margin-left: -720px; }
-.m_content-usb .f_container figure.cable { left: auto; right: -127px; bottom: 0; width: auto; height: auto; margin-left: 0; }
+.m_content-usb .f_container figure.cable { left: auto; right: -127px; bottom: 20px; width: auto; height: auto; margin-left: 0; }
 
 .s2 .m_content-usb { height: 879px; }
 .s2 .m_content-usb .f_header-type1 .desc { max-width: 700px; }

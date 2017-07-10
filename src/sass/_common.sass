@@ -65,45 +65,9 @@ body
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: none
   -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
   margin: 0
   padding: 0
-
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button, iframe, th, td
-  margin: 0
-  padding: 0
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary
-  display: block
-  margin: 0
-  padding: 0
-
-h1, h2, h3, h4, h5, h6, dt
-  font-weight: normal
-
-img, fieldset, iframe, button
-  border: 0 none
-
-li
-  list-style: none
-
-button
-  border: 0 none
-
-table
-  border-collapse: collapse
-  border-spacing: 0
-
-th, td
-  border-collapse: collapse
-
-legend, caption, hr
-  display: none
-
-select, input, textarea,
-i, em, u, cite
-  font-style: normal
-
-/*strong{font-weight:normal;}*/
 
 figcaption
   text-indent: -9999em
@@ -117,9 +81,6 @@ a
 
 .chrome a, .safari a
   outline-offset: -3px
-
-body
-  -webkit-font-smoothing: antialiased
 
 section[class*="m_content-"]
   max-width: 1440px
@@ -340,6 +301,10 @@ figure[data-media-video]
       margin: 0 auto
       -height: 100%
 
+  .img_mt_mod 
+    margin-top: 100px
+
+
 .load
   .f_container > figure img
     transition: all 0.96s cubic-bezier(0.215, 0.61, 0.355, 1)
@@ -488,7 +453,7 @@ html.s1 .f_header-type1 .desc
     border-color: #fff
 
 .m_content-design
-  height: 1598px
+  height: 1398px
   article
     position: relative
     left: 50%
@@ -498,7 +463,7 @@ html.s1 .f_header-type1 .desc
     display: none
   .simply
     right: 260px
-    top: 113px
+    top: 20px
     width: 440px
     text-align: right
     .tit
@@ -520,7 +485,7 @@ html.s1 .f_header-type1 .desc
       margin-bottom: 17px
   .uniform
     left: 260px
-    bottom: 110px
+    bottom: 70px
     width: 540px
     .tit, .desc
       text-align: left
@@ -534,7 +499,7 @@ html.s1 .f_header-type1 .desc
     left: 50%
     width: auto
     height: auto
-    margin-left: -480px
+    margin-left: -400px
     &.mobile_zero_camera
       display: none
 
@@ -730,7 +695,7 @@ html.s1 .f_header-type1 .desc
     width: 100%
 
 .m_content-capture-richer
-  height: 855px
+  height: 690px
   background: #000
   .f_header-type1
     padding-top: 96px
@@ -831,7 +796,7 @@ html.s1 .f_header-type1 .desc
   margin: 50px auto 40px 
   height: 1px 
   background-color: #bebebe
-  max-width: 1024px 
+  max-width: 994px 
   width: 100% 
 
 .tab-content
@@ -1430,16 +1395,16 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc
     font-size: 8px
 
 .m_content-ip68
-  height: 1415px
+  height: 1255px
   background: #000
   article
     position: relative
     left: 50%
     width: 1440px
-    margin-left: -720px
+    margin-left: -640px
   .f_header-type1
     top: 90px
-    left: 710px
+    left: 670px
     width: 500px
     text-align: right
     .tit, .desc
@@ -1461,8 +1426,8 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc
     .ip68-txt
       position: absolute
       top: auto
-      bottom: 100px
-      left: 245px
+      bottom: 80px
+      left: 135px
       z-index: 10
       strong, p
         color: #fff
@@ -1780,7 +1745,7 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc
       height: auto
   .sound-top-arti
     position: relative
-    height: 890px
+    height: 730px
     figure
       left: 0
       bottom: 0
@@ -1788,14 +1753,14 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc
       margin-left: 0
     .f_header-type1
       position: absolute
-      top: 302px
+      top: 182px
       left: 830px
       .desc
         width: 300px
         margin-top: 20px
   .sound-btm-arti
     position: relative
-    height: 957px
+    height: 807px
     .f_header-type1
       left: 240px
       top: 406px
@@ -1993,7 +1958,7 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc
       display: none
 
 .m_content-usb
-  height: 953px
+  height: 853px
   background: #000
   .f_header-type1
     color: #fff
@@ -2009,7 +1974,7 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc
     figure.cable
       left: auto
       right: -127px
-      bottom: 0
+      bottom: 20px
       width: auto
       height: auto
       margin-left: 0
@@ -2184,3 +2149,4 @@ html.s1 .m_content-capture .capture-slide .f_header-type1 .desc
   .f_container
     height: auto
     margin-top: 0
+
