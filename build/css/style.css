@@ -256,7 +256,7 @@ html.s1 .f_header-type1 .desc { max-width: 330px; padding: 0 16px; margin: 12px 
 .m_content-color { height: 930px; background: #000; }
 .m_content-color .f_header-type1 { position: relative; padding-top: 80px; }
 .m_content-color .f_header-type1 .tit, .m_content-color .f_header-type1 .desc, .m_content-color .f_header-type1 .small { color: #fff; }
-.m_content-color .f_header-type1 .desc { margin: 20px 0 47px; }
+.m_content-color .f_header-type1 .desc { margin: 20px 50px 47px; }
 .m_content-color .f_container { position: relative; margin-top: 89px; }
 .m_content-color .color-list { margin: 0 auto; width: 100%; text-align: center; }
 .m_content-color .color-list li { display: inline-block; width: 189px; margin-left: 74px; text-align: center; }
@@ -343,7 +343,7 @@ html.s1 .f_header-type1 .desc { max-width: 330px; padding: 0 16px; margin: 12px 
 .filter-slide .filter-slide-box .img-list li { width: 100%; }
 .filter-slide .filter-slide-box .img-list figure { width: 100%; height: auto; }
 .filter-slide .filter-slide-box .img-list figure img { width: 100%; height: auto; }
-.filter-slide .basic-filter-scroll { max-width: 1024px; height: 130px; margin: 0 auto; }
+.filter-slide .basic-filter-scroll { max-width: 914px; height: 130px; margin: 0 auto; }
 .filter-slide .thumb-nav { max-width: 1550px; overflow: hidden; overflow-x: auto; -webkit-overflow-scrolling: touch; position: relative; padding-bottom: 30px; }
 .filter-slide .thumb-nav div { position: relative; margin-left: 16px; background: none; border: 0; text-align: center; }
 .filter-slide .thumb-nav div img { opacity: 0.4; filter: alpha(opacity=40); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; -webkit-transition: opacity 0.4; transition: opacity 0.4; }
