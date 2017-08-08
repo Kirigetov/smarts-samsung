@@ -1,49 +1,31 @@
 $(document).ready(function() {
 
-	$('.js-hero-slider').on('init', function(event, slick){
+	var	btn = $('<button/>', { class: 'btn-nav js-slick-trigger' });
 
-	    var	btn = $('<button/>', { class: 'btn-nav js-slick-trigger' });
-		var slider = $('.js-hero-slider');
-		var dots = slider.find('.slick-dots');
-		
-		dots.prepend(btn).before();
-	}); 
+	var owl = $('.js-hero-slider');
+		owl.owlCarousel({
+		    items:1,
+		    loop:true,
+		    margin:0,
+		    autoplay:true,
+		    autoplayTimeout:2000,
+		    autoplayHoverPause:false,
+		    dots: true,
+			callbacks: true,
+			onInitialized: moveNav
+		});
 
-	$('.js-hero-slider').slick({
-		autoplay: true,
-		autoplaySpeed: 800,
-		dots: true,
-		arrows: false,
-		pauseOnFocus: false,
-		pauseOnHover: false
-	})
-
-	$(".js-slick-trigger").on("click", function(){
-		
-		if ($(this).hasClass('is-paused')) {
-			$(this).removeClass('is-paused');
-			$('.js-hero-slider').slick('slickPlay');
-		} else {
-			$(this).addClass('is-paused');
-			$('.js-hero-slider').slick('slickPause');		
+		function moveNav() {
+		  btn.appendTo('.owl-stage-outer');
 		}
-	});
 
-
-	$('.js-main-video').slick({
-        fade: true,
-        asNavFor: '.js-nav-video',
-        dots: false,
-        arrows: false
-	});
-
-	$('.js-nav-video').slick({
-		slidesToShow: 4,
-        slidesToScroll: 1,
-        variableWidth: true,
-        asNavFor: '.js-main-video',
-        arrows: false,
-        focusOnSelect: true,
-        infinite: false
-	});
+		$('.js-slick-trigger').on('click',function(){
+			if ($(this).hasClass('is-paused')) {
+				$(this).removeClass('is-paused');
+			    owl.trigger('play.owl.autoplay',[2000]);
+			} else {
+				$(this).addClass('is-paused');
+			    owl.trigger('stop.owl.autoplay');
+			}
+		})
 });

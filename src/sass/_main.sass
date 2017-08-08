@@ -31,34 +31,27 @@
 			max-width: 100%
 			width: 100%
 			height: auto
-	.slick-dots
-		bottom: 40px
 
-.slick-dots
-	li
-		margin: 0 10px
-		button
-			width: 12px
-			height: 12px
-		&.slick-active 
-			button
-				background: #424242
-	.btn-nav 
-		display: inline-block
-		vertical-align: middle
-		margin: 6px 10px 0
-		background: none
-		border: none
-		box-shadow: none
-		border-radius: 0
-		text-indent: 10000px
-		overflow: hidden
-		+s('stop')
-		&.is-paused
-			+s('play')
+.btn-nav
+	position: absolute
+	bottom: 51px
+	left: 44%
+	transform: translateX(-50%) 
+	display: inline-block
+	vertical-align: middle
+	margin: 6px 10px 0
+	background: none
+	border: none
+	box-shadow: none
+	border-radius: 0
+	text-indent: 10000px
+	overflow: hidden
+	+s('stop')
+	&.is-paused
+		+s('play')
 
 .products
-	margin: 0 -24px 60px
+	margin: 0 -12px 45px
 	font-size: 0
 	&__col
 		display: inline-block
@@ -76,6 +69,7 @@
 	overflow: hidden
 	text-decoration: none
 	+clr
+	transition: opacity 0.2s
 	&:active
 		color: #000
 	&__title,
@@ -113,8 +107,11 @@
 		font-size: 12px
 		text-transform: uppercase
 		color: #363636
+		transition: background 0.2s
 		&:first-child
 			margin-right: 10px
+		&:hover
+			background: rgba(0,0,0,0.05)
 	&__img
 		position: absolute
 
@@ -141,12 +138,12 @@
 
 .videothumbs
 	margin: 0 -10px
+	font-size: 0
 
 .videothumb
 	position: relative
-	z-index: 10000000000000
+	display: inline-block
 	height: 200px
-	max-width: 330px
-	width: 100%
+	width: 25%
 	padding: 0 10px
 	
