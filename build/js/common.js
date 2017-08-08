@@ -1,47 +1,49 @@
 $(document).ready(function() {
 
-	$('.js-thumb-img').slick({
+	$('.js-hero-slider').on('init', function(event, slick){
 
-		slidesToShow: 6,
-		slidesToScroll: 1,
-		asNavFor: '.js-gallery',
-		dots: false,
-		infinity: false,
-		// focusOnSelect: true,
-		arrows: true,
-		prevArrow: $('.image-thumb_prev'),
-		nextArrow: $('.image-thumb_next')
+	    var	btn = $('<button/>', { class: 'btn-nav js-slick-trigger' });
+		var slider = $('.js-hero-slider');
+		var dots = slider.find('.slick-dots');
 		
+		dots.prepend(btn).before();
+	}); 
+
+	$('.js-hero-slider').slick({
+		autoplay: true,
+		autoplaySpeed: 800,
+		dots: true,
+		arrows: false,
+		pauseOnFocus: false,
+		pauseOnHover: false
 	})
 
-	$('.js-gallery').slick({
-		fade: true,
-		slidesToShow: 1,
-		asNavFor: '.js-thumb-img',
-		dots: false,
-		prevArrow: $('.image-gallery_prev'),
-		nextArrow: $('.image-gallery_next')
-	})
+	$(".js-slick-trigger").on("click", function(){
+		
+		if ($(this).hasClass('is-paused')) {
+			$(this).removeClass('is-paused');
+			$('.js-hero-slider').slick('slickPlay');
+		} else {
+			$(this).addClass('is-paused');
+			$('.js-hero-slider').slick('slickPause');		
+		}
+	});
 
-	$('.js-tabs span').click(function(){
-		var tab_id = $(this).attr('data-tab');
 
-		$('.js-tabs span').removeClass('current');
-		$('.tab-content').removeClass('current');
+	$('.js-main-video').slick({
+        fade: true,
+        asNavFor: '.js-nav-video',
+        dots: false,
+        arrows: false
+	});
 
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-	})
-
-	$('.js-photo-mode button').click(function(){
-		var mode_id = $(this).attr('data-mode');
-
-		$('.js-photo-mode button').removeClass('on');
-		$('.mode-content').removeClass('show');
-
-		$(this).addClass('on');
-		$("#"+mode_id).addClass('show');
-
-	})
-
+	$('.js-nav-video').slick({
+		slidesToShow: 4,
+        slidesToScroll: 1,
+        variableWidth: true,
+        asNavFor: '.js-main-video',
+        arrows: false,
+        focusOnSelect: true,
+        infinite: false
+	});
 });
